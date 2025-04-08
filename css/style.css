@@ -54,6 +54,7 @@
     text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
     position: relative;
     padding-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   
   h1::after {
@@ -617,9 +618,23 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 2rem;
-  max-width: 1200px;
+  padding: 10rem;
+  /* max-width: 1200px; */
   margin: 0 auto;
+}
+
+/* Gradient overlay */
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  z-index: -1; /* sits behind the content */
+  pointer-events: none;
+  border-radius: inherit;
 }
 
 /* Teaser Grid */
